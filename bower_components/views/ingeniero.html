@@ -1,0 +1,274 @@
+<!-- ingeniero -->
+
+
+      <div ng-if="!id">
+        <div class="page-header">
+        
+          <h1>Error</h1>
+        
+        </div>
+        <div class="alert alert-danger">
+          <p>Ingeniero no encontrado</p>
+        </div>
+      </div>
+      <div ng-if="id">
+        <div class="page-header">
+       
+          <ingeniero-name></ingeniero-name>
+          
+          
+        </div>
+        <div class="row">
+
+          <div class="col-md-6">
+            <div class="col-md-12" ng-controller="TabsController">
+        
+
+              <div ng-if="id == 1">
+                  <div ng-if= "alarm1">
+                  <div class="alert alert-danger">ALARMA ACTIVADA</div>  
+                  </div>
+                  
+                  <ul class="nav nav-tabs nav-justidfied">
+                   <li ng-class="{ active:isActive(1) }"><a ng-click="selectTab(1)">Grafico1</a></li>
+                  <li ng-class="{ active:isActive(2) }"><a ng-click="selectTab(2)">Grafico2</a></li>
+                  <li ng-class="{ active:isActive(3) }"><a ng-click="selectTab(3)">Grafico3</a></li>
+                </ul>
+                <div class="tab-content">
+                
+                  <!-- Ingenierias -->
+                  <div ng-show="isActive(1)">
+
+                      <canvas id="line" class="chart chart-line" chart-colors="colors" chart-data="data[0]"
+                          chart-labels="labels" chart-series="series" chart-options="options"
+                          chart-dataset-override="datasetOverride" chart-click="onClick">
+                          </canvas>
+                  </div>
+                  <!--Estadisticas-->
+                  <!-- Stats -->
+                  <div ng-show="isActive(2)">
+                      <canvas id="bar" class="chart chart-bar" chart-colors="colors"
+                        chart-data="data[0]" chart-labels="labels"> chart-series="series"
+                      </canvas>
+                    </div>
+                   <!-- Evolucion -->
+                  <div ng-show="isActive(3)">
+                    <canvas id="doughnut" class="chart chart-doughnut" chart-colors="colors"
+                      chart-data="data[0]" chart-labels="labels">
+                    </canvas>
+                  </div>
+                </div>
+            </div>
+
+            
+
+            <div ng-if="id == 2">
+            <div ng-if= "alarm2">
+                  <div class="alert alert-danger">ALARMA ACTIVADA</div>  
+                  </div>
+                 
+                  <ul class="nav nav-tabs nav-justified">
+                   <li ng-class="{ active:isActive(1) }"><a ng-click="selectTab(1)">Grafico1</a></li>
+                  <li ng-class="{ active:isActive(2) }"><a ng-click="selectTab(2)">Grafico2</a></li>
+                  <li ng-class="{ active:isActive(3) }"><a ng-click="selectTab(3)">Grafico3</a></li>
+                </ul>
+                <div class="tab-content">
+                
+                  <!-- Ingenierias -->
+                  <div ng-show="isActive(1)">
+                      <canvas id="line" class="chart chart-line"  chart-colors="colors" chart-data="data[1]"
+                          chart-labels="labels" chart-series="series" chart-options="options"
+                          chart-dataset-override="datasetOverride" chart-click="onClick">
+                          </canvas>
+                  </div>
+                  <!--Estadisticas-->
+                  <!-- Stats -->
+                  <div ng-show="isActive(2)">
+                      <canvas id="bar" class="chart chart-bar"  chart-colors="colors"
+                        chart-data="data[1]" chart-labels="labels"> chart-series="series"
+                      </canvas>
+                    </div>
+                   <!-- Evolucion -->
+                  <div ng-show="isActive(3)">
+                    <canvas id="doughnut" class="chart chart-doughnut"  chart-colors="colors"
+                      chart-data="data[1]" chart-labels="labels">
+                    </canvas>
+                  </div>
+                </div>
+            </div>
+
+            <div ng-if="id == 3">
+            <div ng-if= "alarm3">
+                  <div class="alert alert-danger">ALARMA ACTIVADA</div>  
+                  </div>
+                  
+                  <ul class="nav nav-tabs nav-justified">
+                   <li ng-class="{ active:isActive(1) }"><a ng-click="selectTab(1)">Grafico1</a></li>
+                  <li ng-class="{ active:isActive(2) }"><a ng-click="selectTab(2)">Grafico2</a></li>
+                  <li ng-class="{ active:isActive(3) }"><a ng-click="selectTab(3)">Grafico3</a></li>
+                </ul>
+                <div class="tab-content">
+                
+                  <!-- Ingenierias -->
+                  <div ng-show="isActive(1)">
+                      <canvas id="line" class="chart chart-line"  chart-colors="colors" chart-data="data[2]"
+                          chart-labels="labels" chart-series="series" chart-options="options"
+                          chart-dataset-override="datasetOverride" chart-click="onClick">
+                          </canvas>
+                  </div>
+                  <!--Estadisticas-->
+                  <!-- Stats -->
+                  <div ng-show="isActive(2)">
+                      <canvas id="bar"   chart-colors="colors" class="chart chart-bar"
+                        chart-data="data[2]" chart-labels="labels"> chart-series="series"
+                      </canvas>
+                    </div>
+                   <!-- Evolucion -->
+                  <div ng-show="isActive(3)">
+                    <canvas id="doughnut"  chart-colors="colors" class="chart chart-doughnut"
+                      chart-data="data[2]" chart-labels="labels">
+                    </canvas>
+                  </div>
+                </div>
+            </div>
+
+            <div ng-if="id == 4">
+            <div ng-if= "alarm4">
+                  <div class="alert alert-danger">ALARMA ACTIVADA</div>  
+                  </div>
+                  
+                  <ul class="nav nav-tabs nav-justified">
+                   <li ng-class="{ active:isActive(1) }"><a ng-click="selectTab(1)">Grafico1</a></li>
+                  <li ng-class="{ active:isActive(2) }"><a ng-click="selectTab(2)">Grafico2</a></li>
+                  <li ng-class="{ active:isActive(3) }"><a ng-click="selectTab(3)">Grafico3</a></li>
+                </ul>
+                <div class="tab-content">
+                
+                  <!-- Ingenierias -->
+                  <div ng-show="isActive(1)">
+                      <canvas id="line" class="chart chart-line"  chart-colors="colors" chart-data="data[3]"
+                          chart-labels="labels" chart-series="series" chart-options="options"
+                          chart-dataset-override="datasetOverride" chart-click="onClick">
+                          </canvas>
+                  </div>
+                  <!--Estadisticas-->
+                  <!-- Stats -->
+                  <div ng-show="isActive(2)">
+                      <canvas id="bar"  chart-colors="colors" class="chart chart-bar"
+                        chart-data="data[3]" chart-labels="labels"> chart-series="series"
+                      </canvas>
+                    </div>
+                   <!-- Evolucion -->
+                  <div ng-show="isActive(3)">
+                    <canvas id="doughnut"  chart-colors="colors" class="chart chart-doughnut"
+                      chart-data="data[3]" chart-labels="labels">
+                    </canvas>
+                  </div>
+                </div>
+            </div>
+
+            <div ng-if="id == 5">
+            <div ng-if= "alarm5">
+                  <div class="alert alert-danger">ALARMA ACTIVADA</div>  
+                  </div>
+                  
+                  <ul class="nav nav-tabs nav-justified">
+                   <li ng-class="{ active:isActive(1) }"><a ng-click="selectTab(1)">Grafico1</a></li>
+                  <li ng-class="{ active:isActive(2) }"><a ng-click="selectTab(2)">Grafico2</a></li>
+                  <li ng-class="{ active:isActive(3) }"><a ng-click="selectTab(3)">Grafico3</a></li>
+                </ul>
+                <div class="tab-content">
+                
+                  <!-- Ingenierias -->
+                  <div ng-show="isActive(1)">
+                      <canvas id="line" class="chart chart-line"  chart-colors="colors" chart-data="data[4]"
+                          chart-labels="labels" chart-series="series" chart-options="options"
+                          chart-dataset-override="datasetOverride" chart-click="onClick">
+                          </canvas>
+                  </div>
+                  <!--Estadisticas-->
+                  <!-- Stats -->
+                  <div ng-show="isActive(2)">
+                      <canvas id="bar"  chart-colors="colors" class="chart chart-bar"
+                        chart-data="data[4]" chart-labels="labels"> chart-series="series"
+                      </canvas>
+                    </div>
+                   <!-- Evolucion -->
+                  <div ng-show="isActive(3)">
+                    <canvas id="doughnut"  chart-colors="colors" class="chart chart-doughnut"
+                      chart-data="data[4]" chart-labels="labels">
+                    </canvas>
+                  </div>
+                </div>
+            </div>
+
+
+            <div ng-if="id == 6">
+            <div ng-if= "alarm6">
+                  <div class="alert alert-danger">ALARMA ACTIVADA</div>  
+                  </div>
+                  
+                  <ul class="nav nav-tabs nav-justified">
+                   <li ng-class="{ active:isActive(1) }"><a ng-click="selectTab(1)">Grafico1</a></li>
+                  <li ng-class="{ active:isActive(2) }"><a ng-click="selectTab(2)">Grafico2</a></li>
+                  <li ng-class="{ active:isActive(3) }"><a ng-click="selectTab(3)">Grafico3</a></li>
+                </ul>
+                <div class="tab-content">
+                
+                  <!-- Ingenierias -->
+                  <div ng-show="isActive(1)">
+                      <canvas id="line"  chart-colors="colors" class="chart chart-line" chart-data="data[5]"
+                          chart-labels="labels" chart-series="series" chart-options="options"
+                          chart-dataset-override="datasetOverride" chart-click="onClick">
+                          </canvas>
+                  </div>
+                  <!--Estadisticas-->
+                  <!-- Stats -->
+                  <div ng-show="isActive(2)">
+                      <canvas id="bar"  chart-colors="colors" class="chart chart-bar"
+                        chart-data="data[5]" chart-labels="labels"> chart-series="series"
+                      </canvas>
+                    </div>
+                   <!-- Evolucion -->
+                  <div ng-show="isActive(3)">
+                    <canvas id="doughnut"  chart-colors="colors" class="chart chart-doughnut"
+                      chart-data="data[5]" chart-labels="labels">
+                    </canvas>
+                  </div>
+                </div>
+            </div>
+
+</div>
+        </div>
+          <!-- Tabs -->
+          <div class="col-md-6" ng-controller="TabsController">
+
+            <ul class="nav nav-tabs nav-justified">
+            
+               <li ng-class="{ active:isActive(1) }"><a ng-click="selectTab(1)">Variables</a></li>
+            </ul>
+            <div class="tab-content">
+              <!-- Ingenierias -->
+              <div ng-show="isActive(1)">
+                <ingeniero-data></ingeniero-data>
+                
+              </div>
+              <!--Estadisticas-->
+              <!-- Stats -->
+              <div ng-show="isActive(2)">
+                <ingeniero-stats></ingeniero-stats>
+              </div>
+               <!-- Evolucion -->
+              <div ng-show="isActive(3)">
+                <ingeniero-evolution></ingeniero-evolution>
+              </div>
+            </div>
+          </div>
+          <!-- /tabs -->
+        </div>
+        <!-- solicitudes -->
+        <ingeniero-solicitudes name="{{ingeniero.var1}}"></ingeniero-solicitudes>
+       
+          <!-- /solicitud -->
+      </div>
+      <!-- /ingeniero -->

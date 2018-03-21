@@ -1,0 +1,35 @@
+extends ../layout.jade
+block contenido
+	h1 Panel de administración
+	table(class="table")
+		caption Datos Actuales
+		thead
+			tr
+				th var1
+				th var2
+				th var3
+				th var4
+				th var5
+				th var6
+				th var7
+				th var8
+				th var9
+				th var10
+		tbody
+			each doc in vars
+				tr
+					td= doc.var1
+					td= doc.var2
+					td= doc.var3
+					td= doc.var4
+					td= doc.var5
+					td= doc.var6
+					td= doc.var7
+					td= doc.var8
+					td= doc.var9
+					td= doc.var10
+					td
+						a(href="/menu/edit/#{doc.id}") Editar
+						=" - "
+						a(href="/menu/delete/#{doc.id}") Eliminar
+						
